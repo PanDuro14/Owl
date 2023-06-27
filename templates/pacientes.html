@@ -1,0 +1,54 @@
+{% extends "layout.html" %} 
+{% block content %}   
+
+<head>
+    <title>OWL</title>
+    <link rel="stylesheet" href="static/css/tabla3.css">
+</head>
+<body style="background-color:#F6F6F6;">
+<center>
+    <br>
+    <br>
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="/static/js/popper.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>  
+    
+    <center>
+        <h3>Pacientes registrados</h3>
+    </center>
+    <center>
+        <a href='/nuevo_paciente' class="btn btn-primary">Agregar a un paciente</a>
+    </center>
+    <center>
+        <table class="content-table">
+            <thead>
+                <tr>
+                <th>Nombre paciente</td>
+                <th></td>
+                <th></td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for paciente in pacientes %}
+                <tr>
+                    <td>                                                       
+                        {{ paciente.1 + ' '+ paciente.2 + ' ' + paciente.3 }}
+                    </td>
+                    
+                    <td bgcolor="#828282" width="60">
+                        <!--/ed_puesto/{{paciente.0}}-->
+                        <center><a href="#" style="color:#FFFFFF; text-decoration:none;">Editar &nbsp;<i class="far fa-edit"></i></a></center>
+                    </td>
+                    <td bgcolor="#FFF5757" width="60">
+                        <!-- /bor_paciente/{{paciente.0}} -->
+                        <center><a href="" style="color:#FFFFFF; text-decoration:none;" id='myBor'>Borrar &nbsp;<i class="fas fa-trash-alt"></i></a></center>                    
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </center>
+</center>
+</body>
+{% endblock %}
+

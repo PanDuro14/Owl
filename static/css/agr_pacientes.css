@@ -1,0 +1,156 @@
+h2{
+    text-align: center;
+    font-weight: bold;
+    
+}
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+.child{
+	background-color: #27a9e6;
+	padding: .2rem;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px;
+    padding: 0 4px 0 4px;
+}
+button {
+	border-radius: 20px;
+	border: 1px solid #6AC3ED;
+	background-color: #6AC3ED;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+	
+}
+.form-row input{
+	width: calc(50% - 10px);
+	margin-right: 10px;
+}
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.horz-form{
+    display: flex;
+    width: 50%;
+}
+
+.form-container {
+    display: block;
+	position: relative;
+	width: calc(30%);
+	height: calc(5%);
+	margin: 10px auto;
+	padding: 30px 10px 10px;
+	
+}
+
+.name-container {
+    display: flex;
+    justify-content: center;
+}
+
+.name-field {
+    margin: 10px;
+}
+
+.input-field {
+    width: 200px;
+}
+
+.text{
+	position: absolute;
+	left: auto;
+	bottom: auto;
+}
+.content-table {
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9en;
+	min-width: 600px;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+	background-color: #333769;
+	color: #ffff;
+	text-align: left;
+	font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+	padding: 12px 15px;
+}
+
+.content-table tbody tr {
+	border-bottom: 1px solid #dddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+	border-bottom: 2px solid #333769;
+}
+
+.content-table tbody tr.active-row {
+	font-weight: bold;
+	color: #333769;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
+
+}
+
+
+.form-center-row {
+    display: flex;
+	position: relative;
+	width: calc(50%);
+	height: calc(5%);
+	margin: 20px auto;
+	padding: 30px 10px 10px;
+	
+}

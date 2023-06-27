@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar pacientes</title>
+    <link rel="stylesheet" href="static/css/agr_pacientes.css" />
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="/static/js/popper.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+    
+</head>
+
+<body>
+    <h2>Agregar pacientes</h2>
+    <form action="/nuevo_paciente" method="POST">
+        <div class="form-group">
+            <div class="center-form">
+                <div class="form-container col-4">
+                    <label for="nom_cliente"> Nombre(s): </label><br><br>&nbsp            
+                    <input type="text" id="nom_cliente" class="form-control" name="nom_cliente" placeholder="Nombres"required><br><br>&nbsp                
+                </div>
+                <div class="form-container col-4">
+                    <label for="ap_pa"> Apellido paterno: </label>
+                    <input type="text" id="ap_pa" class="form-control" name="ap_pa" placeholder="Apellido Paterno"required><br><br>&nbsp                
+                </div>
+                <div class="form-container col-4">
+                    <label for="ap_ma"> Apellido materno: </label>
+                    <input type="text" id="ap_ma" class="form-control" name="ap_ma"placeholder="Apellido Materno"required><br><br>&nbsp
+                </div>                    
+            </div>
+
+            <div class="center-form">
+                <div class="form-container">
+                    <br>
+                    <label for="fecha_nacimiento"> Fecha Nacimiento: </label>
+                    <input type="date" id="fecha_nacimiento" class="form-control" name="fecha_nacimiento" required><br><br>&nbsp
+                </div>
+                
+                <div class="form-container">
+                    <label for="genero"> Género: </label>
+                    <select id="genero" class="form-control" name="genero" required>
+                        <option>Género</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select><br><br>
+                </div> 
+
+                <div class="form-container">
+                    <label for="civil"> Estado civil: </label>
+                    <select id="civil" class="form-control" name="civil" required>
+                        <option>Selecciona</option>
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                        <option value="divorciado">Divorciado</option>
+                        <option value="viudo">Viudo</option>
+                    </select><br><br>
+                </div>        
+            </div>
+        </div>
+
+        <div class="form-center-row">             
+            <div>
+                <label for="regis_on">  ¿Está registrado en Owl? </label>
+                <div class="center">
+                    <input type="radio", name="regis_on" id="regis_on" value="Si">Sí</input><br>
+                    <input type="radio", name="regis_on" id="regis_on" value="No">No</input><br>                  
+                </div>
+            </div>
+
+            <div>
+                <label for="antecedentes"> ¿Cuénta con antecedentes médicos? </label>
+                <div class="center">
+                    <input type="radio", name="antecedentes" id="antecedentes" value="Si">Sí</input><br>
+                    <input type="radio", name="antecedentes" id="antecedentes" value="No">No</input><br>
+                </div>    
+                <label for="medicamentos"> Medicamentos </label>
+                <input type="text" id="medicamentos" class="form-control" name="medicamentos" placeholder="Medicamentos"required><br><br>&nbsp                
+            </div>
+        </div>
+        <div class="center-form">                                
+            <a type="button" href="/" ><button type="submit">Guardar</button></a>
+        </div>   
+    </form>
+</body>
+</html>
+{% endblock %}
